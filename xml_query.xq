@@ -3,6 +3,7 @@
 let $nl := "&#10;"
 let $metadata := doc("metadata.xml")/metadata
 for $serie in doc("data.xml")//Series
+	where $serie/@UNIT_MEASURE.282 = "PS"
 	order by $serie/@REF_AREA.282
 	return
 		<serie>
@@ -15,11 +16,11 @@ for $serie in doc("data.xml")//Series
 		{$nl}
 			<values>{
 				for $item in $serie/Obs
-				order by $serie/Obs/@TIME_PERIOD
+				order by $item/@TIME_PERIOD
 				return
-					<item TIME_PERIOD= {$serie/Obs/@TIMEPERIOD}>
+					<item TIME_PERIOD= "{$item/@TIME_PERIOD}">
 		{$nl}
-						<obs>{$item/OBS_VALUE}</obs>
+							<obs>{$item/@OBS_VALUE}</obs>
 		{$nl}
 					</item>	
 			}</values>

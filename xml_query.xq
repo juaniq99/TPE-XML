@@ -1,9 +1,14 @@
+declare variable $years as xs:integer external;
+if ($years < 0) then
+	error()
+else
+
 <result>
 {
 let $nl := "&#10;"
 let $metadata := doc("metadata.xml")/metadata
 for $serie in doc("data.xml")//Series
-	where $serie/@UNIT_MEASURE.282 = "PS"
+	where $serie/@UNIT_MEASURE.282 = "PS" and count($serie/Obs) >= $years
 	order by $serie/@REF_AREA.282
 	return
 		<serie>

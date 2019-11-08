@@ -20,7 +20,7 @@ for $serie in doc("data.xml")//Series
 				return
 					<item TIME_PERIOD= "{$item/@TIME_PERIOD}">
 		{$nl}
-							<obs>{$item/@OBS_VALUE}</obs>
+							<obs>{data($item/@OBS_VALUE)}</obs>
 		{$nl}
 					</item>	
 			}</values>

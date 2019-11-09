@@ -1,6 +1,6 @@
 declare variable $years as xs:integer external;
 if ($years < 0) then
-	error()
+	error(xs:QName("ERROR"),"Ingresar valor entero positivo")
 else
 
 <result>
@@ -9,9 +9,9 @@ let $nl := "&#10;"
 let $metadata := doc("metadata.xml")/metadata
 for $serie in doc("data.xml")//Series
 
-	let $count := max($serie/Obs/@TIME_PERIOD) - min($serie/Obs/@TIME_PERIOD)
-
-	where $serie/@UNIT_MEASURE.282 = "PS" and $count >= $years
+(:	let $count := max($serie/Obs/@TIME_PERIOD) - min($serie/Obs/@TIME_PERIOD)
+:)
+	where $serie/@UNIT_MEASURE.282 = "PS" (:and $count >= $years:)
 	order by $serie/@REF_AREA.282
 	return
 		<serie>

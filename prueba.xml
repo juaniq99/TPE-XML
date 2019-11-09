@@ -1,0 +1,32 @@
+<result>
+	<serie>
+		<freq>Quaterly</freq>
+		<activity>Agriculture</activity>
+		<area>Austria</area>
+		<values>
+			<item TIME_PERIOD="2012">
+				<obs>1200</obs>
+			</item>
+			<item TIME_PERIOD="2013">
+				<obs>1450</obs>
+			</item>
+		</values>
+	</serie>
+	<serie>
+		<freq>Quaterly</freq>
+		<activity>Agriculture</activity>
+		<area>Austria</area>
+		<values>
+			<item TIME_PERIOD="2002-1Q">
+				<obs>3200</obs>
+			</item>
+			<item TIME_PERIOD="2002-2Q">
+				<obs>4450</obs>
+			</item>
+			<item TIME_PERIOD="2002-3Q">
+				<obs>3120</obs>
+			</item>
+
+		</values>
+	</serie>
+</result>

@@ -1,6 +1,6 @@
 <result>
 	<serie>
-		<freq>Quaterly</freq>
+		<freq>Annualy</freq>
 		<activity>Agriculture</activity>
 		<area>Austria</area>
 		<values>
@@ -14,7 +14,7 @@
 	</serie>
 	<serie>
 		<freq>Quaterly</freq>
-		<activity>Agriculture</activity>
+		<activity>Transport</activity>
 		<area>Austria</area>
 		<values>
 			<item TIME_PERIOD="2002-1Q">

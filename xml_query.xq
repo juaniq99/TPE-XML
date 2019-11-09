@@ -9,9 +9,9 @@ let $nl := "&#10;"
 let $metadata := doc("metadata.xml")/metadata
 for $serie in doc("data.xml")//Series
 
-(:	let $count := max($serie/Obs/@TIME_PERIOD) - min($serie/Obs/@TIME_PERIOD)
-:)
-	where $serie/@UNIT_MEASURE.282 = "PS" (:and $count >= $years:)
+let $count := if ($serie/@FREQ.282 ="Q" ) then count($serie/Obs) div 4 else count($serie/Obs)
+
+	where $serie/@UNIT_MEASURE.282 = "PS" and $count >= $years
 	order by $serie/@REF_AREA.282
 	return
 		<serie>
@@ -36,5 +36,4 @@ for $serie in doc("data.xml")//Series
 		</serie>
 }
 </result>
-
 

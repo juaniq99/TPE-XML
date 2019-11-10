@@ -2,7 +2,7 @@
 
 if [ $# -ne 1 ]
 then
-	echo "Error de cantidad de argumentos"
+	echo "Wrong number of arguments, only 1 needed"
 	exit 1
 fi
 
@@ -10,27 +10,27 @@ error=0
 echo "$1" | egrep "^[0-9]+$" &> /dev/null
 if [ $? -ne 0 ]
 then
-	echo "Error de argumento, ingrese un numero entero"
+	echo "Argument error, please enter a positive integer value"
 	let error=1
 elif [ 0 -gt $1 ]
 then
-	echo "Error de argumento, su numero no es positivo"
+	echo "Argument error, please enter a positive integer value"
 	let error=1
 elif [ ! -e data.xml ]
 then
-	echo "Error, falta data.xml"
+	echo "Error, missing data.xml"
 	let error=1
 elif [ ! -e metadata.xml ]
 then
-	echo "Error, falta metadata.xml"
+	echo "Error, missing metadata.xml"
 	let error=1
 elif [ ! -e xml_query.xq ]
 then
-	echo "Error, falta xml_query.xq"
+	echo "Error, missing xml_query.xq"
 	let error=1
 elif [ ! -e json_convert.xsl ]
 then
-	echo "Error, falta json_convert.xsl"
+	echo "Error, missing json_convert.xsl"
 	let error=1
 fi
 

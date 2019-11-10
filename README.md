@@ -20,7 +20,7 @@ Java
 Un parser, como el proporcionado por Apache: Xerces.
 Saxon-HE 9.5.1.10
 *********************************************************************************************************
-Contener los siguientes archivos en la misma carpeta que tp.sh:9
+Contener los siguientes archivos en la misma carpeta que tp.sh:
 data.xml
 metadata.xml
 xml_query.xq 

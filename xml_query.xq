@@ -1,6 +1,6 @@
 declare variable $years as xs:integer external;
 if ($years < 0) then
-	error(xs:QName("ERROR"),"Ingresar valor entero positivo")
+	error(xs:QName("ERROR"),"Please enter positive integer value")
 else
 
 <result>

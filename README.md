@@ -27,6 +27,8 @@ xml_query.xq
 json_convert.xsl
 En caso de que falte alguno, el programa le informará.
 *********************************************************************************************************
+Primero, es necesario descomprimir el archivo TPE.zip. Para esto correr el comando "unzip TPE.zip"
+*********************************************************************************************************
 Darle los permisos de ejecución a tp.sh: correr el comando “chmod u+x tp.sh”
 *********************************************************************************************************
 Ejemplo de invocación del programa(Encontrándose en la carpeta contenedora del mismo):

@@ -3,7 +3,7 @@ T.P. 2do Parcial
 Grupo 5
 Quintairos, Juan Ignacio. Leg: n° 59715
 Riera Torraca, Valentino. Leg: n° 
-Spitzner, Agustín. Leg: n° 
+Spitzner, Agustín. Leg: n° 60142
 
  _____  ______          _____  __  __ ______ 
 |  __ \|  ____|   /\   |  __ \|  \/  |  ____|

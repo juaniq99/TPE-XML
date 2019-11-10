@@ -30,7 +30,10 @@ En caso de que falte alguno, el programa le informará.
 Darle los permisos de ejecución a tp.sh: correr el comando “chmod u+x tp.sh”
 *********************************************************************************************************
 Ejemplo de invocación del programa(Encontrándose en la carpeta contenedora del mismo):
+
 bash tp.sh 4
+
+donde 4 debe ser remplazado por el parámetro deseado
 *********************************************************************************************************
 El programa solo aceptará un argumento, este debe ser un número entero positivo o cero.
 Caso contrario, será indicado por el mismo con un error.

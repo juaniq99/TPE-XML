@@ -6,8 +6,8 @@ then
 	exit 1
 fi
 
-echo "$1" | egrep "^[0-9]+$" &> /dev/null
 error=0
+echo "$1" | egrep "^[0-9]+$" &> /dev/null
 if [ $? -ne 0 ]
 then
 	echo "Error de argumento, ingrese un numero entero"
@@ -37,7 +37,7 @@ fi
 if [ $error -eq 0 ]
 then
 	java net.sf.saxon.Query xml_query.xq years=$1 > intermediate.xml
-	java net.sf.saxon.Transform -s:intermediate.xml -xsl:json_convert.xsl > output.json
+	java net.sf.saxon.Transform -s:intermediate.xml -xsl:json_convert.xsl -o:output.json
 	exit 0 
 else
 	exit 1
